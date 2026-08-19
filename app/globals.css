@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
+  --color-amber: var(--amber);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cat-1: var(--cat-1);
+  --color-cat-2: var(--cat-2);
+  --color-cat-3: var(--cat-3);
+  --color-cat-4: var(--cat-4);
+  --color-cat-5: var(--cat-5);
+  --color-cat-6: var(--cat-6);
+  --color-cat-7: var(--cat-7);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-grotesk), ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: light;
+  --background: #f3f6fb;
+  --foreground: #1b1f27;
+  --card: #ffffff;
+  --card-foreground: #1b1f27;
+  --popover: #ffffff;
+  --popover-foreground: #1b1f27;
+  --primary: #0f6cbd;
+  --primary-foreground: #ffffff;
+  --primary-hover: #0b4f8f;
+  --primary-soft: #e9f2fc;
+  --secondary: #ffffff;
+  --secondary-foreground: #1b1f27;
+  --muted: #f3f6fb;
+  --muted-foreground: #66707e;
+  --accent: #e9f2fc;
+  --accent-foreground: #0f6cbd;
+  --destructive: #d93025;
+  --destructive-foreground: #ffffff;
+  --positive: #1e8e3e;
+  --negative: #d93025;
+  --amber: #c87f0a;
+  --border: #e1e6ee;
+  --input: #e1e6ee;
+  --ring: #0f6cbd;
+  --cat-1: #0f6cbd;
+  --cat-2: #2fa7a0;
+  --cat-3: #7c6fe0;
+  --cat-4: #e0985b;
+  --cat-5: #4c9be8;
+  --cat-6: #c15fa0;
+  --cat-7: #8a8f98;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04';
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .input {
+    height: 2.75rem;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background-color: var(--card);
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--foreground);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .input::placeholder {
+    color: var(--muted-foreground);
+  }
+  .input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+  }
+}
