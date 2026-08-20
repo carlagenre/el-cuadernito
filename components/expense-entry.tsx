@@ -36,13 +36,22 @@ export function ExpenseEntry() {
       agregarGastos(gastos)
       setTexto('')
     } catch (e) {
-      if (e instanceof AiError && e.code === 'needs_billing') {
-        setError(`${e.message} Mientras tanto, usá la carga manual.`)
-        setModo('manual')
+      if (e instanceof AiError) {
+        if (e.code === 'needs_key') {
+          setError(`${e.message} Mientras tanto, usá la carga manual.`)
+          setModo('manual')
+        } else if (e.code === 'rate_limited') {
+          setError(`${e.message} Mientras tanto, usá la carga manual.`)
+          setModo('manual')
+        } else if (e.code === 'empty') {
+          setError(
+            'No identifiqué ningún gasto en ese texto. Probá algo tipo "gasté 3500 en el super y 1200 en bondi".',
+          )
+        } else {
+          setError(`No pude procesar el pedido: ${e.message}`)
+        }
       } else {
-        setError(
-          'No pude entender eso. Probá algo tipo "gasté 3500 en el super y 1200 en bondi".',
-        )
+        setError('No pude conectar con el servidor. Probá de nuevo en un rato.')
       }
     } finally {
       setCargando(false)
