@@ -7,7 +7,7 @@ export const maxDuration = 30
 // Usa el tier gratuito de Google Gemini (sin tarjeta de crédito). Generá tu
 // key gratis en aistudio.google.com y configurala como GOOGLE_GENERATIVE_AI_API_KEY
 // en las variables de entorno de tu hosting.
-const MODEL = google('gemini-2.0-flash')
+const MODEL = google('gemini-2.5-flash')
 
 type Body =
   | { mode: 'text'; system: string; messages: { role: 'user' | 'assistant'; content: string }[] }
