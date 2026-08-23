@@ -33,7 +33,7 @@ export function AppShell({ onLogout }: { onLogout: () => void }) {
           <div className="flex items-center gap-2.5">
             <Logo size={36} />
             <div className="leading-tight">
-              <p className="font-mono text-base font-bold text-foreground">El cuadernito</p>
+                                      <p className="font-mono text-base font-bold text-foreground">Cat Cash</p>
               <p className="hidden text-xs text-muted-foreground sm:block">
                 Tu plata, anotada y explicada
               </p>
