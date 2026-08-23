@@ -9,7 +9,7 @@ export function Logo({ size = 64, className }: { size?: number; className?: stri
     >
       <Image
         src="/logo-gato.png"
-        alt="El cuadernito"
+                  alt="Cat Cash"
         width={size}
         height={size}
         className="h-full w-full object-cover"
