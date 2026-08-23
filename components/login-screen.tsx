@@ -127,10 +127,6 @@ export function LoginScreen({ onLogin }: { onLogin: (email: string) => void }) {
             )}
           </button>
         </Card>
-
-        <p className="mt-4 text-center text-xs text-muted-foreground text-pretty">
-          Hecho para el CoderCup · inspirado en Junior Achievement Argentina
-        </p>
       </div>
     </main>
   )
