@@ -14,7 +14,7 @@ export function LoginScreen({ onLogin }: { onLogin: (email: string) => void }) {
   const [cargando, setCargando] = useState(false)
 
   function entrarDemo() {
-    const demoEmail = 'demo@cuadernito.app'
+          const demoEmail = 'demo@catcash.app'
     guardarSesion(demoEmail)
     onLogin(demoEmail)
   }
@@ -40,7 +40,7 @@ export function LoginScreen({ onLogin }: { onLogin: (email: string) => void }) {
           <div className="flex flex-col items-center text-center">
             <Logo size={64} />
             <h1 className="mt-4 font-mono text-2xl font-bold tracking-tight text-foreground">
-              El cuadernito
+                          Cat Cash
             </h1>
             <p className="mt-1 text-sm text-muted-foreground text-pretty">
               Tu plata, anotada y explicada
