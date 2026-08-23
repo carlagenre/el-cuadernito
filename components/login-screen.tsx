@@ -40,7 +40,7 @@ export function LoginScreen({ onLogin }: { onLogin: (email: string) => void }) {
           <div className="flex flex-col items-center text-center">
             <Logo size={64} />
             <h1 className="mt-4 font-mono text-2xl font-bold tracking-tight text-foreground">
-                          Cat Cash
+                          <span className="text-primary">Cat</span> <span className="text-[#1e8e3e]">Cash</span>
             </h1>
             <p className="mt-1 text-sm text-muted-foreground text-pretty">
               Tu plata, anotada y explicada
