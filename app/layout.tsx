@@ -18,7 +18,7 @@ const grotesk = Space_Grotesk({
 export const metadata: Metadata = {
     title: 'Cat Cash — Tu plata, anotada y explicada',
   description:
-    'Finanzas personales para argentinos: anotá tus gastos en lenguaje natural, armá tu presupuesto y cumplí tus objetivos de ahorro.',
+    'Anotá tus gastos en lenguaje natural, armá tu presupuesto y cumplí tus objetivos de ahorro.',
   generator: 'v0.app',
 }
 
